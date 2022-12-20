@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ITDatabaseRest</name>
+    </assembly>
+    <members>
+        <member name="M:ITDatabaseRest.Controllers.ColumnController.GetAll(System.String)">
+            <summary>
+            Returns all attributes from table with specified name
+            </summary>
+            <response code="200">_All columns from table with specified name returned_</response>
+            <response code="400">_Table with specified name or database is not created yet _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.ColumnController.Get(System.String,System.String)">
+            <summary>
+            Returns attribute with specified name from table with specified name
+            </summary>
+            <response code="200">_Column with specified name  from table with specified name returned_</response>
+            <response code="400">_Table with specified name or database is not created yet _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.ColumnController.Search(System.String,System.String,System.String)">
+            <summary>
+            Returns table where values of attribute with specified name from table with specified name matches with specified regex pattern
+            </summary>
+            <response code="200">_Returned table which matches search pattern_</response>
+            <response code="400">_Table with specified name or database is not created yet,or specified attribute does not exist _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.ColumnController.Post(System.String,System.String,System.String)">
+            <summary>
+            Creates attribute with specified name and type in specified table 
+            </summary>
+            <response code="200">_New attribute created_</response>
+            <response code="400">_Table with specified name or database is not created yet, or specified type is not supported _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.ColumnController.Delete(System.String,System.String)">
+            <summary>
+            Removed attribute from table with specified name 
+            </summary>
+            <response code="200">_Attribute removed_</response>
+            <response code="400">_Table with specified name or database is not created yet, or specified attribute does not exists _</response>      
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.DatabaseController.Get">
+            <summary>
+            Returns  database in case it was created before
+            </summary>
+            <response code="400">_Database is not created yet_</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.DatabaseController.Create(System.String)">
+            <summary>
+            Creates database with specified name
+            </summary>
+            <response code="200">_Created database with specified name_</response>
+            <response code="400">_Specified name is incorrect _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.DatabaseController.Delete">
+            <summary>
+            Clears database
+            </summary>
+            <response code="200">_Cleared database_</response>
+            <response code="400">_Something went wrong _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.RowController.GetAll(System.String)">
+            <summary>
+            Returns all rows from table with specified name
+            </summary>
+            <response code="200">_all rows from table with specified name returned_</response>
+            <response code="400">_Table with specified name or database is not created yet _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.RowController.Get(System.String,System.Int32)">
+            <summary>
+            Returns row with specified id from table with specified name
+            </summary>
+            <response code="200">_Specified row from table with specified name returned_</response>
+            <response code="400">_Table with specified name or database is not created yet _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.RowController.Post(System.String,ITDatabaseRest.Row)">
+            <summary>
+            Updates rows with specified index from table with specified name
+            </summary>
+            <response code="200">_row from table with specified name updated_</response>
+            <response code="400">_Table with specified name or database is not created yet, or row with this index does not exist, or value has invalid type_</response>  
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.RowController.Put(System.String,System.Int32,ITDatabaseRest.Row)">
+             <summary>
+            Added row to table with specified name
+             </summary>
+             <response code="200">_added row to table with specified name_</response>
+             <response code="400">_Table with specified name or database is not created yet, or value has invalid type _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.TableController.Get(System.String)">
+             <summary>
+            Returns table with specified name
+             </summary>
+             <response code="200">_Returned table with specified name_</response>
+             <response code="400">_Database is not created yet or table with this name does not exist _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.TableController.Create(System.String)">
+            <summary>
+            Creates table with specified name
+            </summary>
+            <response code="200">_Created table with specified name_</response>
+            <response code="400">_Table with specified name or database is not created yet _</response>
+        </member>
+        <member name="M:ITDatabaseRest.Controllers.TableController.Delete(System.String)">
+            <summary>
+            Removes table with specified name
+            </summary>
+            <response code="200">_Removed table with specified name_</response>
+            <response code="400">_Table with specified name or database is not created yet _</response>
+        </member>
+    </members>
+</doc>
